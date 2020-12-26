@@ -1,0 +1,3 @@
+#!/bin/bash
+# jvm arguments will be write below
+exec java -javaagent:/skywalking/skywalking-agent.jar -Dskywalking.agent.service_name==hello-word -Dskywalking.collector.backend_service=114.67.105.74:11800 -Djava.security.egd=file:/dev/./urandom -XX:-PrintGCDetails -XX:-PrintGCTimeStamps -XX:-HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF8 -Duser.timezone=GMT+08 -XX:CMSInitiatingOccupancyFraction=90 -XX:StringTableSize=20000 -XX:MaxGCPauseMillis=200 -XX:+UseG1GC -XX:MaxPermSize=150m -Xss256k -Xmx768m -Xms256m -jar /app.jar
